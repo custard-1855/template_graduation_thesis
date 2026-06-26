@@ -1,3 +1,3 @@
-# README for your project 
-
-This is a blank README file. You can add your project description here.
+# このレポジトリについて
+- https://github.com/being24/latex-template-ja を参考にしています.
+- INIADの学部生向けです.
