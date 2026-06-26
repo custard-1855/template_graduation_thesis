@@ -1,0 +1,33 @@
+%! TEX root = ../main.tex
+\documentclass[main]{subfiles}
+
+\begin{document}
+\chapter{実験結果と考察}
+ 実験結果について整理する。
+
+\begin{table}[htbp]
+ \begin{center}
+   \begin{tabular}{|l|r|r|r|}
+    \hline
+    Model                       & PSDS1 & PSDS2 & mpAUC \\
+    \hline
+    Mean Teacher(MT)            & 0.369 & 0.581 & 0.720 \\
+    Confident Mean Teacher(CMT) & 0.297 & 0.60  & 0.689 \\
+    $CMT_{neg}$                     & 0.369 & 0.543 & 0.661 \\
+    $CMT_{scale}$                 & 0.368 & 0.621 & 0.699 \\
+    \hline
+  \end{tabular}
+   \caption{Mean Teacher比較}
+   \label{table:mtAcc}
+\end{center}
+\end{table}
+
+表\ref{table:mtAcc}に各手法の精度比較を示す。Mean Teacher（MT）と比較して、CMTはPSDS2が向上した一方で、PSDS1及びmpAUCは低下した。
+これに対し、$CMT_{neg}$ではCMTで見られたPSDS1の低下は改善されたものの、その他の指標においては精度が悪化した。
+$CMT_{scale}$は、MTと同等のPSDS1を維持しつつ、PSDS2においてはCMTを上回る性能を示した。ただし、mpAUCに関してはMTには及ばなかった。\par
+
+考察として、CMTにおけるPSDS1の低下は、非イベント区間の情報（負例）が欠落したことで、時間的な予測が不安定になったことに起因すると考えられる。
+$CMT_{neg}$では負例を導入することでこの問題を解消したが、正例に対して負例の割合が過多となり、逆にクラス分類（PSDS2など）の予測が不安定化した。
+以上の結果から、$CMT_{scale}$における正例と負例の量的バランスの調整が、時間精度とクラス分類精度の双方を安定化させるために有効であったと結論づけられる。\par
+
+ \end{document}
