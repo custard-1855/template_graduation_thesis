@@ -1,0 +1,26 @@
+%! TEX root = ../main.tex
+\documentclass[main]{subfiles}
+
+% \renewcommand{\appendixname}{付録} %%ここを付録と変更することで「付録 A」などと変更されます。デフォルトでは「appendix A」。
+% \renewcommand{\appendixtocname}{付録} %%目次のappendix開始ページに表示される文字列を変更できます。
+% \renewcommand{\appendixpagename}{付録} %%\appendixpage で表示されるページにでる文字列を変更できます。
+% \appendixpage %%付録開始時に \appendixpagename と書かれたページを1枚追加します。
+% \addappheadtotoc %%目次に付録が始まるページを追加してくれます。
+
+\begin{document}
+\chapter{付録}
+\section{概要}
+ソースコードは主に訓練から評価まで行うtrain\_pretrained.pyと、モデルのあらゆる定義を行うsed\_trainer\_pretrained.pyから成る。
+付録では、CMTとMixStyleの主要な実装を示す。なお、SEBBsは\url{https://github.com/merlresearch/sebbs}の実装に変更を加えず、呼び出す形で使用しているため、省略する。
+その他、ソースコードは\url{https://github.com/custard-1855/dcase_base}にて公開している。\par
+
+また、使用したライブラリは以下の通り。
+\begin{itemize}
+\item 深層学習フレームワーク: PyTorch\cite{Ansel_PyTorch_2_Faster_2024}
+\item 音声前処理: torchaudio\cite{hwang2023torchaudio}
+\item モデル実装: PyTorch Lightning\cite{Falcon_PyTorch_Lightning_2019}
+...
+\end{itemize}
+
+% コードの添付
+\subfile{../code/01_cmt.tex}
