@@ -65,6 +65,3 @@
 - `classes/INIAD_modern.cls`: 体裁 (表紙・見出し・余白など) の定義
 - `bibliography.bbx`: 参考文献の表示スタイル
 - `bin/diff.sh`: `latexdiff` で版ごとの差分PDFを作成
-
-## 他
-gitやlatexについてはAIに聞くことをお勧めします.
