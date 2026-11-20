@@ -1,14 +1,28 @@
 %! TEX root = ../main.tex
 \documentclass[main]{subfiles}
 
-% 全体的にCMT_scaleの記述を修正
 \begin{document}
 \chapter{はじめに}
-日本における少子高齢化の進行に伴い、医療・介護資源の不足は喫緊の課題である。
-この解決策の一つとして、情報技術を活用して高齢者や障がい者の生活支援を行う Ambient Assisted Living (AAL) が挙げられる。
-AALは在宅での自立生活を促進することで、医療や介護で発生する労働時間や社会保障費などの社会的コストを抑制すると同時に、
-被介護者の生活の質（Quality of Life; QoL）向上に寄与することを目指すものである\cite{blackman2016ambient}。\par
-...
-本論文は次のように構成される。2節では本研究が参考にしている実装を簡単に紹介し、提案手法について述べる。3節では実験で用いられる指標と、実験内容を述べる。
-4節は実験の結果を整理し、考察を行う。5節は本論文の成果をまとめ、今後の課題を述べる。
+\label{chap:introduction}
+% ここを書き換える: 研究の背景・目的・論文の構成
+\section{背景}
+この章では、研究の背景と目的を述べる。
+まず、研究対象の分野における現状と課題を、先行研究を引用しながら説明する。
+引用は \texttt{references.bib} に文献情報を登録し、\verb|\cite{キー}| で参照する\cite{lamport1994latex}。
+複数の文献を同時に引用することもできる\cite{knuth1986texbook,knuth1981breaking}。
+Webページは \texttt{@online} として登録し、URLと閲覧日を記載する\cite{ctan_luatexja}。\par
+
+\section{目的}
+背景で述べた課題に対し、本研究で何を明らかにするのか、あるいは何を実現するのかを明確に述べる。
+本研究の貢献は次のとおりである。
+\begin{itemize}
+  \item 貢献1: 〇〇の課題に対する新しい手法を提案する
+  \item 貢献2: 提案手法を△△のデータで評価し、有効性を示す
+\end{itemize}
+
+\section{本論文の構成}
+本論文は次のように構成される。
+\ref{chap:method}章では提案手法について述べる。
+\ref{chap:experiment}章では評価実験の内容を述べ、\ref{chap:result}章で結果を示して考察を行う。
+\ref{chap:conclusion}章では本論文の成果をまとめ、今後の課題を述べる。
 \end{document}

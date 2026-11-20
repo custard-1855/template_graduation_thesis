@@ -1,7 +1,4 @@
 #!/bin/bash
 
-if [ ! -z "$GITHUB_ACTIONS" ]; then
-    cp /.latexmkrc $HOME/
-fi
-
+# リポジトリ直下の .latexmkrc（LuaLaTeX設定）を使ってビルドする
 latexmk main.tex

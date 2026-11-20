@@ -41,3 +41,6 @@ __latexindent_temp.tex
 
 __*.tex
 *SAVE-ERROR
+# minted cache
+_minted/
+_minted*/

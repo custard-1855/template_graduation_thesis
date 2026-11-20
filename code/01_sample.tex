@@ -1,0 +1,19 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\section{ソースコードの例}
+ソースコードは \texttt{minted} 環境で掲載する。言語名を指定するとシンタックスハイライトされる。
+\begin{minted}{python}
+import torch
+import torch.nn.functional as F
+
+
+def bce_loss(pred: torch.Tensor, target: torch.Tensor) -> torch.Tensor:
+    """二値交差エントロピー損失を計算する。
+
+    pred: (batch, classes) モデルの出力確率
+    target: (batch, classes) 正解ラベル
+    """
+    return F.binary_cross_entropy(pred, target)
+\end{minted}
+\end{document}
