@@ -59,7 +59,7 @@ watch:
 
 .PHONY: clean
 clean:
-	$(LATEXMK_CMD) -C $(TEX_SRCS)
+	$(LATEXMK_CMD) -C $(MAIN_SRC).tex
 
 .latexmkrc:
 	$(DOCKER_CMD) cp /.latexmkrc ./

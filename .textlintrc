@@ -7,7 +7,9 @@
         "allowlist": {
             "allow": [
                 "github.com",
-                "github.com/github/"
+                "github.com/github/",
+                "〇〇",
+                "△△"
             ]
         }
     },
