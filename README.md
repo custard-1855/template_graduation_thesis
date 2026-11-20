@@ -3,6 +3,8 @@
   - devcontainerで環境を閉じています.
 - INIADの学部生向けの卒業論文テンプレートです.
 - LuaLaTeX + jlreq でビルドします. 完成イメージは [main.pdf](main.pdf) を参照してください.
+- 同じ体裁の Typst 版もあります: [typst-graduation-thesis](https://github.com/custard-1855/typst-graduation-thesis)
+  - Docker と devcontainer が要らず, Typst の実行ファイルだけでビルドできます.
 
 # 使い方
 ## ツールの用意
