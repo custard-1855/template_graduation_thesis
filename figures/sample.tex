@@ -1,0 +1,20 @@
+% TikZで描いたサンプル図。figures/ で lualatex sample.tex を実行して sample.pdf を作る
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{luatexja}
+\usetikzlibrary{positioning, arrows.meta}
+
+\begin{document}
+\begin{tikzpicture}[
+    >=Stealth, node distance=1.2cm,
+    box/.style={rectangle, draw, thick, rounded corners, fill=#1, minimum width=2.6cm, minimum height=1.1cm, align=center},
+    box/.default=white
+  ]
+  \node[box=blue!10]   (input)  {入力データ};
+  \node[box=orange!15, right=of input] (pre)  {前処理};
+  \node[box=orange!15, right=of pre]   (model) {提案モデル};
+  \node[box=green!12,  right=of model] (out)  {出力・評価};
+  \draw[->, thick] (input) -- (pre);
+  \draw[->, thick] (pre) -- (model);
+  \draw[->, thick] (model) -- (out);
+\end{tikzpicture}
+\end{document}

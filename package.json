@@ -1,5 +1,5 @@
 {
-    "name": "thesis-template-master",
+    "name": "template_graduation_thesis",
     "scripts": {
         "lint": "textlint */*.tex",
         "fix": "textlint --fix */*.tex",

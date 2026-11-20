@@ -81,4 +81,4 @@ draft:
 	git checkout -b $(branch)
 	git commit -m "WIP" --allow-empty
 	git push -u origin $(branch)
-	hub compare
+	gh pr create --draft --fill
